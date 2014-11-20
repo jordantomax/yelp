@@ -1,0 +1,33 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <ul id="js-results">
+    <ul>
+
+    <script src="/assets/javascripts/data.js"></script>
+    <script src="/assets/javascripts/libs/oauth-signature.js"></script>
+    <script src="/assets/javascripts/libs/oauth-1.0a.js"></script>
+    <script src="/assets/javascripts/libs/jquery-2.1.1.min.js"></script>
+    <script src="/assets/javascripts/libs/handlebars-v2.0.0.js"></script>
+    <script src="/assets/javascripts/index.js"></script>
+
+    <script id="template-results" type="text/x-handlebars-template">
+      {{#each businesses}}
+        <li>
+          <h4>{{name}}</h4>
+          <img src="{{rating_img_url}}" />
+          {{review_count}} reviews
+
+          <ul>
+            {{#each categories}}
+              <li>
+                {{this.[0]}},
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+    </script>
+  <body>
+</html>
