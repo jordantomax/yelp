@@ -1,11 +1,12 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/screen.css" media="screen" />
   </head>
-  <body>
-    <ul id="js-results">
-    <ul>
 
-    <script src="/assets/javascripts/data.js"></script>
+  <body>
+    <ul id="js-results" class="biz-wrap">
+    </ul>
+
     <script src="/assets/javascripts/libs/oauth-signature.js"></script>
     <script src="/assets/javascripts/libs/oauth-1.0a.js"></script>
     <script src="/assets/javascripts/libs/jquery-2.1.1.min.js"></script>
@@ -14,18 +15,25 @@
 
     <script id="template-results" type="text/x-handlebars-template">
       {{#each businesses}}
-        <li>
-          <h4>{{name}}</h4>
-          <img src="{{rating_img_url}}" />
-          {{review_count}} reviews
+        <li class="biz clearfix">
+          <img class="biz-img" src="{{image_url}}" />
 
-          <ul>
-            {{#each categories}}
-              <li>
-                {{this.[0]}},
-              </li>
-            {{/each}}
-          </ul>
+          <div class="biz-info">
+            <h4 class="biz-name">{{name}}</h4>
+
+            <div class="biz-reviews">
+              <div class="biz-stars-wrap"><img class="biz-stars" src="{{rating_img_url}}" /></div>
+              <span class="type-small biz-number-of-reviews">{{review_count}} reviews</span>
+            </div>
+
+            <ul class="biz-categories">
+              {{#each categories}}
+                <li class="type-small biz-category">
+                  {{this.[0]}}{{#if @last}}{{else}},&nbsp;{{/if}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
         </li>
       {{/each}}
     </script>

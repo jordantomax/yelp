@@ -1,0 +1,47 @@
+.biz-wrap {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.biz {
+  margin-bottom: 12.5px;
+  background-color: #fff;
+  padding: 12.5px;
+}
+.biz:nth-child(even) {
+  clear: both;
+}
+
+.biz-img {
+  max-width: 75px;
+  float: left;
+}
+
+.biz-info {
+  margin-left: 75px;
+  padding-left: 12.5px;
+}
+
+.biz-name {
+  margin: 0;
+  margin-bottom: 7.5px;
+}
+
+.biz-stars {
+  display: block;
+}
+
+.biz-category {
+  float: left;
+}
+
+.biz-reviews {
+  margin-bottom: 7.5px;
+}
+
+.biz-stars-wrap,
+.biz-number-of-reviews {
+  display: inline-block;
+  vertical-align: middle;
+}
